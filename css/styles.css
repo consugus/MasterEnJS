@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+  }
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+  }
+
+body{
+    background: url("../img/hojas.jpg");
+    background-attachment: fixed;
+}
+
+#global{
+    width: 85%;
+    margin: 0 auto; /* para que lo centre*/
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgb(240, 232, 221);
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Verdana, Arial;
+    letter-spacing: 4px;
+    background-color: #235E3D;
+    text-align: center;
+    width: 385px;
+    height: 80px;
+    float: left;
+    margin-bottom: 20px;
+    line-height:35px;
+}
+
+#menu{
+    background-color:rgb(50,50,50);
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#menu ul{
+    line-height: 46px;
+    display: inline block; /* para que muestre todos los nombres en una sola línea */
+}
+
+#menu ul li{
+    /* height: 46px; */
+    /* padding: 10px 0; */
+    list-style: none;
+    display:inline-block;
+    transition: all 300ms;
+    margin-left: 5px;
+}
+
+#menu ul li:hover{
+    background-color: #235E3D;
+}
+
+#menu li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}

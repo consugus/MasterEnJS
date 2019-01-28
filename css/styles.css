@@ -33,11 +33,12 @@ body{
     letter-spacing: 4px;
     background-color: #235E3D;
     text-align: center;
+    font-size: 25px;
     width: 385px;
     height: 80px;
     float: left;
     margin-bottom: 20px;
-    line-height:35px;
+    line-height:23px;
 }
 
 #menu{
@@ -71,4 +72,104 @@ body{
     color: white;
     text-decoration: none;
     padding: 0 10px;
+}
+
+article h2{
+    margin-bottom: 0;
+}
+
+#posts{
+    width: 60%;
+    float: left;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.post{
+    color: #333;
+    padding: 15px;
+}
+
+.post .date {
+    font-size: 22px;
+    display: block;
+    color:gray;
+    margin: 0 10px 0 0;
+}
+
+.text{
+    /* margin-top: 0; */
+    text-align: justify;
+}
+
+.readMore{
+    color: grey;
+    text-decoration: none;
+}
+
+#sidebar{
+    font-family: Helvetica, Arial, sans-serif;
+    width: 38%;
+    float: right;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+h4{
+    /* margin: 50px 0 20px 0; */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333;
+    background-image: url("../img/lines.png");
+}
+
+#sidebar h4 span{
+    background: rgb(240, 232, 221);
+    padding: 10px;
+}
+
+#sidebar img{
+    width: 100%;
+    text-align: center;
+}
+
+#sidebar p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"]{
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: 0 0 2px grey;
+}
+
+form input[type="submit"]{
+    background: #eee;
+    padding: 10px;
+    width: 80px;
+    color: #333;
+    cursor: pointer;
+}
+
+footer{
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    height: 47px;
+    background: rgba(51, 51, 51, 0.70);
+    margin: 0 auto;
+    width: 85%;
+    padding: 0 20px;
+    margin-top: 50px;
+    line-height: 47px;
+}
+
+.bx-wrapper, .bx-viewport{
+    max-height: 250px !important;
 }

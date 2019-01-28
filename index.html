@@ -4,6 +4,8 @@
         <title>Master en JavaScript</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/styles.css">
+        <!-- bxSlider -->
+        <link rel="stylesheet" href="css/jquery.bxslider.css">
     </head>
     <body>
         <section id="global">
@@ -20,21 +22,46 @@
                     </ul>
                 </nav>
 
-                <div class="slider" id="slider"></div>
+                <div class="slider" id="slider">
+                    <div><img src="img/cielo.jpg" title="Foto del cielo"></div>
+                    <div><img src="img/hojas.jpg" title="Foto hojas"></div>
+                    <div><img src="img/rojo.jpg" title="Foto del hojas rojas"></div>
+                </div>
 
                 <section class="content" id="content">
+
                     <div class="posts" id="posts">
-                        <article class="post">
-                            <h2>Titulo del artículo</h2>
-                            <p>Fecha de Publicación</p>
-                            <p>Voluptas atque repudiandae. Consequatur et nostrum eveniet vitae aliquid. Repudiandae veritatis esse error et neque repudiandae omnis. Cupiditate ea sed vel sunt dolores voluptas quisquam qui.
-                                Molestiae possimus aut velit iure. Corporis et culpa corporis fugit ut sunt sed. Id magnam dolorem velit labore molestiae. Deleniti beatae laborum consequatur vitae ipsum numquam nesciunt voluptatibus odit. Fuga omnis provident eveniet praesentium ex impedit occaecati.
-                                Repellat id voluptatem iure maiores fugit velit. Quo perferendis qui voluptatem. Odit et corrupti voluptatem labore ipsam labore. Laborum qui et omnis. Et quia quaerat unde vitae deserunt dolores ab quasi. Fugit quia porro voluptates magni.</p>
-                        </article>
-                    </div>
+                    </div><!-- end .posts -->
 
                     <aside class="sidebar" id="sidebar">
+                        <div id="about">
+                            <h4> <span>¿Quién soy</span></h4>
+                            <img src="img/caracol.jpg" alt="caracol.jpg">
+                            <p>Consequatur dolores quos. Voluptas amet consectetur et sint beatae. Ut placeat ullam et tenetur. Dicta non id. Ut ratione consequuntur dolor officiis enim ut ea illo sapiente.</p>
+                        </div>
+                        <div id="login">
+                            <h4><span>Identifícate</span></h4>
+                            <form action="">
+                                <div>
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" name="nombre">
+                                </div>
+
+                                <div>
+                                        <label for="email">eMail</label>
+                                        <input type="email" name="email">
+                                </div>
+
+                                <div>
+                                        <label for="clave">Password</label>
+                                        <input type="password" name="password">
+                                </div>
+                                <input type="submit" value="Enviar">
+
+                            </form>
+                        </div>
                     </aside>
+                    <div class="clearfix"></div>
                 </section>
             </header>
         </section><!-- end section global -->
@@ -42,6 +69,15 @@
             Curso de Javascript &COPY; - 2019
         </footer><!-- end footer -->
 
-        <script type="text/JavaScript" src="js/main.js"></script>
+        <!-- jQuery -->
+        <!-- <script src="js/jQuery-3.3.1.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- bxSlider -->
+        <script src="js/jquery.bxslider.js"></script>
+        <!-- momentjs -->
+        <!-- <script src="js/momentjs.min-es.js"></script> -->
+        <script src="js/moment.min.js"></script>
+        <script src="js/moment-locale-es.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

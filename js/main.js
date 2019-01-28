@@ -1,1 +1,59 @@
-console.log("estoy cargado");
+$(document).ready(function(){
+    $('#slider').bxSlider({
+        mode: 'fade',
+        captions: true,
+        controls: true
+        // auto: true
+      });
+
+
+      var posts = [
+        {
+            title: "Prueba de título 1",
+            date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
+            content: "Enim quia illo iure sit voluptatibus numquam perferendis quidem iste. Quod quae unde. Occaecati ullam recusandae. Exercitationem corrupti iste ipsam."
+        },
+        {
+            title: "Prueba de título 2",
+            date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
+            content: "Ad voluptate aperiam dolor. Quod est ut officiis. Laborum esse et perferendis."
+        },
+        {
+            title: "Prueba de título 3",
+            date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
+            content: "Qui consequatur voluptates dolore dolorem sint asperiores. Dolorem facilis odio. Est facere vitae ipsa et. Corrupti sit nobis placeat et. Quos laborum quidem. Eos eum ipsum et qui voluptas asperiores eius mollitia."
+        },
+        {
+            title: "Prueba de título 4",
+            date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
+            content: "Quisquam natus assumenda alias minima. Doloribus soluta tenetur earum repellat doloremque sed optio expedita. Nostrum magni explicabo sequi."
+        },
+        {
+            title: "Prueba de título 5",
+            date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
+            content: "Fugit voluptate nisi ut sapiente quibusdam. Optio culpa eius possimus autem. Et qui expedita neque ea consequatur quibusdam. Voluptatum sit maiores. Ex velit quo magnam provident. Enim impedit vero saepe ipsum sapiente nemo aliquid omnis."
+        }
+      ];
+
+      // console.log(posts);
+
+      posts.forEach( (item, index) => {
+        var post = `
+            <article class="post">
+                <h2>${item.title}</h2>
+                <p class="date">${item.date}</p>
+                <p class="text"> ${item.content}
+                    <a href="#" type="button" class="readMore">Leer mas...</a>
+                </p>
+            </article><!-- end article -->
+        `;
+        
+        $('#posts').append(post);
+
+      } );
+
+
+
+
+
+}); // end $(document).ready()

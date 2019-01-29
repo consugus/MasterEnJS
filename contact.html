@@ -42,27 +42,45 @@
                 </div>
 
                 <section class="content" id="content">
-                    <h2>Sobre mi</h2>
-                    <div class="box" id="accordion">
-                        <!-- carga del acordeon -->
 
-                        <h3>¿Quiénes somos?</h3>
-                            <div>
-                                <p>Sapiente in minus. Inventore beatae quia dolorum eaque libero. Non corrupti sint. Quis tempore quo. Ratione occaecati libero minima quam sunt quia vitae iusto.</p>
+                    <div class="contact" id="contact">
+                        <!-- carga de formulario de contacto -->
+                        <h2>Formulario de contacto</h2>
+                        <form id="form-contact"action="#" method="POST">
+                            <div class="field">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" data-validation="alphanumeric">
                             </div>
-
-                        <h3>Nuestros servicios</h3>
-                            <div>
-                                <p>Corporis nostrum ea. Saepe et minus autem voluptatem excepturi molestiae id expedita. Cupiditate dolorem aut. Perferendis qui dolor quia. Dicta id mollitia praesentium et sequi.</p>
+                            <br><br>
+                            <div class="field">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" name="apellido" id="apellido" data-validation="alphanumeric">
                             </div>
-
-                        <h3>Nuestros clientes</h3>
-                            <div>
-                                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                            <br><br>
+                            <div class="field">
+                                    <label for="email">Email</Eabel>
+                                    <input type="email" name="email" id="email" data-validation="email">
                             </div>
+                            <br><br>
+                            <div class="field">
+                                    <label for="sexo">Sexo</label>
+                                    <select name="sexo" id="sex" data-validation="required">
+                                        <option value="men">Hombre</option>
+                                        <option value="woman">Mujer</option>
+                                    </select>
+                            </div>
+                            <br><br>
+                            <div class="field">
+                                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                                    <input type="text" name="fecha-nacimiento" id="fecha-nacimiento" type="text" data-validation="date" data-validation-format="dd-mm-yyyy">
+                            </div>
+                            <br>
+                            <input type="submit" name="enviar" id="enviar">
+
+                        </form>
 
 
-                    </div><!-- end .posts -->
+                    </div><!-- end .contact -->
 
                     <aside class="sidebar" id="sidebar">
                         <div id="about">
@@ -112,6 +130,7 @@
         <script src="js/moment.min.js"></script>
         <script src="js/moment-locale-es.js"></script>
         <script src="jQuery UI/jquery-ui.min.js"></script>
+        <script src="js/jquery.form-validator.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -8,7 +8,7 @@ $(document).ready(function () {
     });
 
     // Carga dinámica de Posts
-    if(window.location.pathname.includes("index.html")){
+    if(window.location.pathname.includes("index")){
         var posts = [{
             title: "Prueba de título 1",
             date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
@@ -95,10 +95,32 @@ $(document).ready(function () {
         });
     }; // end Login falso
 
-
-    if(window.location.pathname.includes("about.html")){
+    // carga del acordeon
+    if(window.location.pathname.includes("about")){
         $('#accordion').accordion();
     };
+
+    // carga del reloj
+    if(window.location.pathname.includes("clock")){
+        // console.log('Estamos en reloj');
+        setInterval(() => {
+            var clock = moment().format('hh:mm:ss');
+            $('#clock').html(clock);
+        }, 1000);
+
+    }
+
+
+    // carga del Form Validator
+    if(window.location.pathname.includes("contact")){
+        $('#fecha-nacimiento').datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+
+        $.validate({
+            lang: 'es'
+        });
+    }
 
 
 

@@ -18,3 +18,8 @@ body{
 #logout{
     color:#235E3D;
 }
+
+#clock{
+    border-color: #235E3D;
+    color: #235E3D;
+}

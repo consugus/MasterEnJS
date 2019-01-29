@@ -1,14 +1,14 @@
-$(document).ready(function(){
+$(document).ready(function () {
+
     $('#slider').bxSlider({
         mode: 'fade',
         captions: true,
         controls: true
         // auto: true
-      });
+    });
 
-
-      var posts = [
-        {
+    // Carga dinámica de Posts
+    var posts = [{
             title: "Prueba de título 1",
             date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
             content: "Enim quia illo iure sit voluptatibus numquam perferendis quidem iste. Quod quae unde. Occaecati ullam recusandae. Exercitationem corrupti iste ipsam."
@@ -33,11 +33,9 @@ $(document).ready(function(){
             date: "Publicado el día " + moment().format('dddd DD') + " de " + moment().format('MMMM') + " de " + moment().format('YYYY'),
             content: "Fugit voluptate nisi ut sapiente quibusdam. Optio culpa eius possimus autem. Et qui expedita neque ea consequatur quibusdam. Voluptatum sit maiores. Ex velit quo magnam provident. Enim impedit vero saepe ipsum sapiente nemo aliquid omnis."
         }
-      ];
+    ];
 
-      // console.log(posts);
-
-      posts.forEach( (item, index) => {
+    posts.forEach((item, index) => {
         var post = `
             <article class="post">
                 <h2>${item.title}</h2>
@@ -47,13 +45,28 @@ $(document).ready(function(){
                 </p>
             </article><!-- end article -->
         `;
-        
         $('#posts').append(post);
+    }); // Fin carga dinámica de posts
 
-      } );
+    // Cambio de tema
+    var theme = $('#theme');
+    $('#to-green').click(function () {
+        theme.attr('href', 'css/theme-green.css')
+    });
+    $('#to-red').click(function () {
+        theme.attr('href', 'css/theme-red.css')
+    });
+    $('#to-blue').click(function () {
+        theme.attr('href', 'css/theme-blue.css')
+    }); // end cambio de tema
 
 
-
+    //Ir arriba
+    $('#up').click(function (e) {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    }); // end Ir arriba
 
 
 }); // end $(document).ready()
